@@ -20,6 +20,11 @@ if __name__ == "__main__":
         with open(sys.argv[2], 'w') as html:
             unordered_list_start, ordered_list_start = False, False
             for line in read:
+                line = line.replace('**', '<b>', 1)
+                line = line.replace('**', '</b>', 1)
+                line = line.replace('__', '<em>', 1)
+                line = line.replace('__', '</em>', 1)
+
                 length = len(line)
                 headings = line.strip("#")
                 heading_count = length - len(headings)
@@ -52,4 +57,11 @@ if __name__ == "__main__":
 
                 if length > 1:
                     html.write(line)
+
+            if unordered_list_start:
+                html.write('</ul>\n')
+            if ordered_list_start:
+                html.write('</ol>\n')
+            # if paragraph:
+            #     html.write('</p>\n')
     exit(0)
