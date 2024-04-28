@@ -27,11 +27,11 @@ if __name__ == "__main__":
                 line = line.replace('__', '</em>', 1)
 
                 length = len(line)
-                headings = line.strip("#")
+                headings = line.lstrip("#")
                 heading_count = length - len(headings)
-                unordered_list = line.strip("-")
+                unordered_list = line.lstrip("-")
                 unordered_count = length - len(unordered_list)
-                ordered_list = line.strip("*")
+                ordered_list = line.lstrip("*")
                 ordered_count = length - len(ordered_list)
 
                 if 1 <= heading_count <= 6:
