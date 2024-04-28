@@ -18,8 +18,7 @@ if __name__ == "__main__":
 
     with open(sys.argv[1]) as read:
         with open(sys.argv[2], 'w') as html:
-            unordered_list_start, ordered_list_start, paragraph =
-            False, False, False
+            unordered_list_start, ordered_list_start, paragraph = False, False, False
             for line in read:
                 line = line.replace('**', '<b>', 1)
                 line = line.replace('**', '</b>', 1)
