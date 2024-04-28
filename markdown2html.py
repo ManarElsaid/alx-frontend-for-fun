@@ -18,13 +18,15 @@ if __name__ == "__main__":
 
     with open(sys.argv[1]) as read:
         with open(sys.argv[2], 'w') as html:
-            unordered_list_start = False
+            unordered_list_start, ordered_list_start = False, False
             for line in read:
                 length = len(line)
                 headings = line.strip("#")
                 heading_count = length - len(headings)
                 unordered_list = line.strip("-")
                 unordered_count = length - len(unordered_list)
+                ordered_list = line.strip("*")
+                ordered_count = length - len(ordered_list)
 
                 if 1 <= heading_count <= 6:
                     line = '<h{}>'.format(
@@ -38,6 +40,15 @@ if __name__ == "__main__":
                 if unordered_list_start and not unordered_count:
                     html.write('</ul>\n')
                     unordered_list_start = False
+
+                if ordered_count:
+                    if not ordered_list_start:
+                        html.write('<ol>\n')
+                        ordered_list_start = True
+                    line = '<li>' + ordered_list.strip() + '</li>\n'
+                if ordered_list_start and not ordered_count:
+                    html.write('</ol>\n')
+                    ordered_list_start = False
 
                 if length > 1:
                     html.write(line)
