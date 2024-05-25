@@ -471,13 +471,14 @@
   }
   
 /* Section Latest news ============================= */
+.section-latest-news .row {
+    flex-direction: row-reverse;
+  }
+
 
   /* Card TESTIMONIAL
       ============================= */
-      .section-latest-news .row {
-        flex-direction: row-reverse;
-      }
-  
+
   .card-testimonial {
     text-align: center;
   }
