@@ -446,6 +446,11 @@
   .card-work:hover .card-title {
     opacity: 1;
   }
+
+  /* Section Latest news ============================= */
+.section-latest-news .row {
+    flex-direction: row-reverse;
+  }
   
   /* Card SERVICES
       ============================= */
@@ -470,10 +475,7 @@
     transition-property: color, background-color;
   }
   
-/* Section Latest news ============================= */
-.section-latest-news .row {
-    flex-direction: row-reverse;
-  }
+
 
 
   /* Card TESTIMONIAL
