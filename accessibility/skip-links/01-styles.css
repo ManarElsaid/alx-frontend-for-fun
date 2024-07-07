@@ -188,11 +188,12 @@
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
   }
-  
+
   .off-screen {
     left: -100vw;
     position: absolute;
   }
+
   .skip-link {
     background: var(--color-black);
     color: var(--color-white);
@@ -204,20 +205,13 @@
     z-index: 10;
     transform: translateY(-1rem);
     transition: transform .2s ease-in-out, opacity .2s ease-in-out;
-    -webkit-transform: translateY(-1rem);
-    -moz-transform: translateY(-1rem);
-    -ms-transform: translateY(-1rem);
-    -o-transform: translateY(-1rem);
-}
+  }
 
-.skip-link:focus {
+  .skip-link:focus {
     opacity: 1;
     transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-}
+  }
+  
   /*** 2. LAYOUT ***/
   
   /* Layout
@@ -604,6 +598,10 @@
     padding-top: 5rem;
   }
   
+  .article-page .header {
+    background-color: transparent;
+  }
+  
   @media only screen and (max-width: 767px) {
     .section-hero {
       margin: -0.1rem 0;
@@ -661,11 +659,7 @@
   
   .card-work:hover .card-outer {
     transform: scale(0.95);
-    -webkit-transform: scale(0.95);
-    -moz-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    -o-transform: scale(0.95);
-}
+  }
   
   .card-work .card-image img {
     height: 30rem;
@@ -678,7 +672,7 @@
     transform: scale(1.2);
     transition: var(--transition-duration) var(--transition-cubic-bezier);
   }
-  
+
   .card-work .card-inner {
     position: absolute;
     top: -0.1rem;
@@ -689,7 +683,6 @@
     transition: var(--transition-duration) var(--transition-cubic-bezier);
   }
   
-
   .card-work .card-title {
     text-align: center;
     margin: 0;
@@ -701,6 +694,7 @@
     display: block;
     text-decoration: none;
     padding-top: 45%;
+    opacity: 0;
   }
   
   .card-work .card-title a::after {
@@ -719,10 +713,6 @@
     background-color: rgba(0, 0, 0, 0.7);
   }
   
-  .card-work .card-title a {
-    opacity: 0;
-  }
-  
   @media only screen and (max-width: 767px) {
   
     .card-work .card-inner {
@@ -737,10 +727,6 @@
     .card-work .card-title a {
       display: block;
       padding: 2rem 1rem 0 1rem;
-    }
-  
-    .card-work:hover .card-inner {
-      background-color: transparent;
     }
   
     .card-work:hover .card-image {
@@ -1137,5 +1123,3 @@
     cursor: text;
     margin: 0 1rem;
   }
-  
-  
