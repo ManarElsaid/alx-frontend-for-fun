@@ -202,16 +202,16 @@
     opacity: 0;
     top: 0;
     z-index: 10;
-    transform: translateY(1rem);
+    transform: translateY(-1rem);
     transition: transform .2s ease-in-out, opacity .2s ease-in-out;
-    -webkit-transform: translateY(1rem);
-    -moz-transform: translateY(1rem);
-    -ms-transform: translateY(1rem);
-    -o-transform: translateY(1rem);
-    -webkit-transition: transform .2s ease-in-out, opacity .2s ease-in-out;
-    -moz-transition: transform .2s ease-in-out, opacity .2s ease-in-out;
-    -ms-transition: transform .2s ease-in-out, opacity .2s ease-in-out;
-    -o-transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+    -webkit-transform: translateY(-1rem);
+    -moz-transform: translateY(-1rem);
+    -ms-transform: translateY(-1rem);
+    -o-transform: translateY(-1rem);
+    -webkit-transition:;
+    -moz-transition:;
+    -ms-transition:;
+    -o-transition:;
 }
 
 .skip-link:focus {
