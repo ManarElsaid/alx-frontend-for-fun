@@ -208,10 +208,6 @@
     -moz-transform: translateY(-1rem);
     -ms-transform: translateY(-1rem);
     -o-transform: translateY(-1rem);
-    -webkit-transition:;
-    -moz-transition:;
-    -ms-transition:;
-    -o-transition:;
 }
 
 .skip-link:focus {
